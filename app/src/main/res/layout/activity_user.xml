@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.stoicdesign.philiplauffenburger.guidings.VideoRecorderActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/user_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorMatilde"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/profile_picture"
+            android:longClickable="false"
+            android:src="@drawable/profil_human"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:background="@color/colorMatilde" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtuser"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:onClick="onNameClick"
+        android:nestedScrollingEnabled="false"
+        android:textColor="#fff"
+            android:layout_alignParentBottom="false"
+            android:typeface="sans"
+            android:textSize="@dimen/abc_text_size_display_1_material"
+            android:background="@color/colorMatildeTrans"
+            android:paddingLeft="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/profile_picture" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp">
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/users_videos_text"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/horizontalScrollView"
+        android:textColor="#2F4F4F"
+            android:paddingTop="4dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_video_table"
+        android:layout_below="@+id/users_videos_text"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView"
+        android:layout_alignParentTop="true">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/txtuser"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:id="@+id/user_props">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_keywords"
+                android:paddingTop="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keyword_icon"
+                    android:src="@drawable/key_icon_hdpi"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:contentDescription="keyword_icon"
+                    android:onClick="onKeywordClick" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_link"
+                android:paddingTop="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/link_icon"
+                    android:src="@drawable/megafon"
+                    android:onClick="onLinkClick" />
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <!--<HorizontalScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/users_videos_text">-->
+        <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/user_video_table"/>-->
+
+
+
+    <!--</HorizontalScrollView>-->
+
+
+</RelativeLayout>
+
+</LinearLayout>

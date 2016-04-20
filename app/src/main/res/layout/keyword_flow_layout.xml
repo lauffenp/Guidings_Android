@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyword_search"
+    android:visibility="gone"
+    android:background="@color/colorPrimary">
+
+
+
+
+        <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_complete_keywords_search"
+            android:hint="@string/map_search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp" />
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/keywords_scroll_view"
+        android:layout_below="@+id/auto_complete_keywords_search"
+        android:layout_alignParentLeft="true">
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/keywords_table"
+    android:layout_below="@+id/auto_complete_keywords_search"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="0dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="0dp">
+
+
+</TableLayout>
+    </HorizontalScrollView>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:clickable="true"
+            android:onClick="onSearchCloseClick"
+            android:layout_alignParentLeft="false"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimary"
+            android:baselineAlignBottom="true" />
+
+        <!--<TableRow-->
+    <!--android:id="@+id/keywords_row"></TableRow>-->
+<!--</TableLayout>-->
+
+
+</RelativeLayout>

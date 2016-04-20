@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity">
+
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="101"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never"-->
+        <!--/>-->
+
+    <item
+        android:id="@+id/action_map"
+        android:orderInCategory="200"
+        android:title="Map"
+        android:icon="@drawable/map_hdpi"
+        app:showAsAction="never"
+ />
+    <item
+        android:id="@+id/action_post"
+        android:orderInCategory="100"
+        android:title="Save"
+        app:showAsAction="always"/>
+
+    <!--android:icon="@drawable/ic_action_post"-->
+        <!--/>-->
+    <item
+        android:id="@+id/action_user"
+        android:orderInCategory="400"
+        android:title="Your Profile"
+        android:icon="@drawable/profil_human_2x"
+        app:showAsAction="never"/>
+
+</menu>

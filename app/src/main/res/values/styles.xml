@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorMatilde</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="colorControlNormal">#c5c5c5</item>
+    <item name="colorControlActivated">@color/accent</item>
+    <item name="colorControlHighlight">@color/accent</item>
+        </style>
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorControlNormal">#c5c5c5</item>
+    <item name="colorControlActivated">@color/accent</item>
+    <item name="colorControlHighlight">@color/accent</item>
+</style>
+
+    <style name="Underline" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+    </style>
+
+    <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:background">#eee</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+
+
+</resources>

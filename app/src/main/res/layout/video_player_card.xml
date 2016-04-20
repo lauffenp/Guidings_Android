@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_card_view"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_width="200dp"
+    android:background="@drawable/custom_info_bubble"
+    android:layout_height="200dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:id="@+id/thumbnail_info"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:contentDescription="thumbnail of video"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="thumbnailClickListener" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:id="@+id/snippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#ff7f7f7f"
+        android:textSize="14sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/thumbnail_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/date_info_window"
+        android:textColor="#ff000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_below="@+id/snippet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/user_info"
+        android:layout_below="@+id/date_info_window"
+        android:layout_toRightOf="@+id/title"
+        android:textColor="#ff000000"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/like_icon_info"
+            android:src="@drawable/liked_heart"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:contentDescription="heart like icon"
+            android:layout_toRightOf="@+id/like_count_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/like_count_info"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

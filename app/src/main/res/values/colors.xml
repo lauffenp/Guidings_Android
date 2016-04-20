@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#FFC515</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color1">#7f7fff</color>
+    <color name="colorMatilde">#232543</color>
+    <color name="accent">#2F4F4F</color>
+    <color name="color_stroke">#2F4F4F</color>
+    <color name="color_stroke_gradient">#202F4F4F</color>
+    <color name="colorMatildeTrans">#5c232543</color>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_card_view"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.stoicdesign.philiplauffenburger.guidings.VideoWatchActivity"
+        tools:showIn="@layout/activity_video_watch"
+        android:background="#ffffff">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/uploaded_by"
+            android:layout_below="@+id/video_title"
+            android:layout_toLeftOf="@+id/like_layout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/thumbnail"
+                android:clickable="true"
+                android:onClick="thumbnailClickListener"
+                android:nestedScrollingEnabled="true" />
+
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/video_player"
+                android:layout_gravity="center"
+                android:clickable="false" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uploaded_by"
+            android:onClick="onClick"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:clickable="true"
+            android:background="#ffffff"
+            android:textColor="#10141f"
+            android:layout_alignParentTop="false"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_alignParentRight="false"
+            android:singleLine="true"
+            android:allowUndo="false"
+            android:layout_above="@+id/horizontalScrollView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/video_title"
+            android:layout_alignParentTop="true"
+            android:background= "#ffffff"
+            android:textColor="#10141f"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/upload_time"
+
+            android:background="#ffffff"
+            android:textColor="#10141f"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentTop="false"
+            android:autoText="false"
+            android:allowUndo="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/horizontalScrollView2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_btn_video"
+            android:src="@drawable/report_icon__2x"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_toLeftOf="@+id/report_btn_video">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/video_watch_table"
+                android:longClickable="true"
+                android:layout_alignParentLeft="true">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:id="@+id/keyword_table_row_video"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="false"
+                    android:layout_toRightOf="@+id/key_img">
+
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:nestedScrollingEnabled="true"
+            android:id="@+id/like_layout"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/video_title">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/like_icon_watch"
+                android:src="@drawable/unliked_grey_heart_hdpi"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_toRightOf="@+id/like_count_watch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/CodeFont"
+                android:id="@+id/like_count_watch"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:singleLine="false"
+                android:textColor="#be1522" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
